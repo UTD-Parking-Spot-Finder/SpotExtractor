@@ -1,0 +1,66 @@
+{
+  "lotName": "Lot P-1",
+  "lotID": 0,
+  "spots": [
+    {
+      "spotID": 0,
+      "realID": 0,
+      "topLeft": [
+        1592,
+        703
+      ],
+      "topRight": [
+        1406,
+        774
+      ],
+      "bottomLeft": [
+        1103,
+        636
+      ],
+      "bottomRight": [
+        1283,
+        575
+      ]
+    },
+    {
+      "spotID": 1,
+      "realID": 0,
+      "topLeft": [
+        1409,
+        774
+      ],
+      "topRight": [
+        1211,
+        849
+      ],
+      "bottomLeft": [
+        912,
+        700
+      ],
+      "bottomRight": [
+        1104,
+        636
+      ]
+    },
+    {
+      "spotID": 2,
+      "realID": 0,
+      "topLeft": [
+        1211,
+        849
+      ],
+      "topRight": [
+        990,
+        934
+      ],
+      "bottomLeft": [
+        701,
+        768
+      ],
+      "bottomRight": [
+        912,
+        698
+      ]
+    }
+  ]
+}
