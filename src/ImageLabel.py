@@ -1,6 +1,6 @@
 import cv2 as cv
 from src.Spot import Spot
-from PySide2.QtWidgets import QLabel
+from PySide2.QtWidgets import QLabel, QInputDialog, QLineEdit
 from PySide2.QtGui import QPixmap, QImage
 from PySide2.QtCore import Qt
 from PySide2 import QtGui
@@ -28,9 +28,15 @@ class ImageLabel(QLabel):
         y = event.pos().y()
         self.currPoints.append((x, y))
 
+        self.drawSpots()
+        self.drawConnectedPoints(self.currPoints)
+        self.updateView()
+
         if len(self.currPoints) == 4:
-            s = Spot(self.currPoints, 0, len(self.mainWindow.spotList))
-            self.mainWindow.spotList.addSpot(s)
+            realID, okPressed = QInputDialog.getInt(self, "Real Spot ID", "What is real ID of the spot?")
+            if okPressed:
+                s = Spot(self.currPoints, realID, len(self.mainWindow.spotList))
+                self.mainWindow.spotList.addSpot(s)
             self.currPoints = []
 
         self.drawSpots()

@@ -11,7 +11,7 @@ from PySide2.QtCore import Qt
 from PySide2 import QtGui
 
 lotData = {
-    "lotName": "Lot H",
+    "lotName": "",
     "lotID": 0,
     "spots": []
 }
