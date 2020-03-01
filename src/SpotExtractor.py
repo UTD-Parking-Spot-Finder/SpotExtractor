@@ -1,12 +1,10 @@
 import cv2 as cv
-import numpy as np
 import json
 import sys
 from src.Spot import Spot
 from src.ImageLabel import ImageLabel
 from src.SpotListWidget import SpotListWidget
-from PySide2.QtWidgets import QApplication, QMainWindow, QMenuBar, QMenu, QAction, QPushButton, QHBoxLayout, QWidget, QListWidget, QListWidgetItem, QGridLayout, QGroupBox, QBoxLayout, QFileDialog, QLineEdit, QVBoxLayout
-from PySide2.QtGui import QPixmap, QImage
+from PySide2.QtWidgets import QApplication, QMainWindow, QMenuBar, QMenu, QAction, QPushButton, QHBoxLayout, QWidget, QGridLayout, QGroupBox, QFileDialog, QLineEdit, QVBoxLayout
 from PySide2.QtCore import Qt
 from PySide2 import QtGui
 

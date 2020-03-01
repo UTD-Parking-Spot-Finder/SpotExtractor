@@ -1,6 +1,6 @@
 import cv2 as cv
 from src.Spot import Spot
-from PySide2.QtWidgets import QLabel, QInputDialog, QLineEdit
+from PySide2.QtWidgets import QLabel, QInputDialog
 from PySide2.QtGui import QPixmap, QImage
 from PySide2.QtCore import Qt
 from PySide2 import QtGui
@@ -17,7 +17,7 @@ class ImageLabel(QLabel):
         self.currentMat = None
 
         self.setMinimumWidth(400)
-        self.setMinimumWidth(300)
+        self.setMinimumHeight(300)
 
 
     def mousePressEvent(self, event):
