@@ -4,7 +4,7 @@ import sys
 from src.Spot import Spot
 from src.ImageLabel import ImageLabel
 from src.SpotListWidget import SpotListWidget
-from PySide2.QtWidgets import QApplication, QMainWindow, QMenuBar, QMenu, QAction, QPushButton, QHBoxLayout, QWidget, QGridLayout, QGroupBox, QFileDialog, QLineEdit, QVBoxLayout
+from PySide2.QtWidgets import QApplication, QMainWindow, QMenuBar, QMenu, QAction, QPushButton, QHBoxLayout, QWidget, QGridLayout, QGroupBox, QFileDialog, QLineEdit, QVBoxLayout, QScrollArea
 from PySide2.QtCore import Qt
 from PySide2 import QtGui
 
@@ -24,7 +24,9 @@ class SpotExtractor(QMainWindow):
         layout = QGridLayout(widget)
 
         # Main Image Window
+        self.scrollArea = QScrollArea()
         self.imageLabel = ImageLabel(self)
+        self.scrollArea.setWidget(self.imageLabel)
 
         # Text Label for Lot Name
         self.lotNameTextField = QLineEdit()
@@ -36,7 +38,7 @@ class SpotExtractor(QMainWindow):
         # Image Box Layout
         imageGroupBox = QGroupBox("Image")
         imageLayout = QHBoxLayout()
-        imageLayout.addWidget(self.imageLabel)
+        imageLayout.addWidget(self.scrollArea)
         imageGroupBox.setLayout(imageLayout)
 
         # Spot List Box Layout
